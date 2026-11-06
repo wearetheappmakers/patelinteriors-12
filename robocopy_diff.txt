@@ -1,0 +1,803 @@
+
+	                  19	d:\xampp\htdocs\patelinteriors.co.in\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\api_compare\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\excel_compare\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\pdf_compare\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\url_compare\
+	  *EXTRA File 		    1040	.phpunit.result.cache
+	  *EXTRA File 		    5914	DEPLOYMENT.md
+	  *EXTRA File 		    7543	MANUAL_TEST_CHECKLIST.md
+	  *EXTRA File 		       0	robocopy_diff.txt
+	  *EXTRA File 		  138517	routes_after.txt
+	  *EXTRA File 		  138517	routes_before.txt
+	  *EXTRA File 		    1956	start-patel-l12.bat
+	  *EXTRA File 		   12903	UPGRADE_NOTES.md
+	    Older     		     919	.env
+	    Older     		    1888	composer.json
+	    Older     		  300174	composer.lock
+	                  86	d:\xampp\htdocs\patelinteriors.co.in\app\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\app\Legacy\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\app\Pagination\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\app\Routing\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\app\Traits\
+	    Older     		     687	AppointmentLetter.php
+	    Older     		     750	Arid.php
+	    Older     		     554	Attendance.php
+	    Older     		     215	BrandLogo.php
+	    Older     		     206	City.php
+	    Older     		    1105	Client.php
+	    Older     		    1693	ClientDocument.php
+	    Older     		     344	Company.php
+	    Older     		     568	CompanyPolicy.php
+	    Older     		     209	Complain.php
+	    Older     		     323	ConsentPerson.php
+	    Older     		     212	Country.php
+	    Older     		     666	Credit.php
+	    Older     		     870	CreditChild.php
+	    Older     		     637	Debit.php
+	    Older     		     760	DebitChild.php
+	    Older     		     336	Delivery.php
+	    Older     		     208	Detail.php
+	    Older     		     211	Download.php
+	    Older     		    1071	Employee.php
+	    Older     		     220	EmployeeChild.php
+	    Older     		     334	Expense.php
+	    Older     		     455	ExpenseChild.php
+	    Older     		     216	FollowupLog.php
+	    Older     		     610	Gallery.php
+	    Older     		     203	Group.php
+	    Older     		     199	GST.php
+	    Older     		     448	Holiday.php
+	    Older     		     540	ItemLedger.php
+	    Older     		     520	IVFollowup.php
+	    Older     		     245	IVFollowupLog.php
+	    Older     		     202	Landmark.php
+	    Older     		    1532	Lead.php
+	    Older     		     645	LeadAssign.php
+	    Older     		     690	LeadBasicChild.php
+	    Older     		     471	LeadBasicDesignChild.php
+	    Older     		     477	LeadBasicMainChild.php
+	    Older     		     244	LeadBasicQuotationChild.php
+	    Older     		     235	LeadCommunication.php
+	    Older     		     524	LeadFollowUp.php
+	    Older     		     219	LeadSource.php
+	    Older     		     213	LeadStage.php
+	    Older     		     217	LeadToshow.php
+	    Older     		     434	Leave.php
+	    Older     		     441	MeetingEntryEmp.php
+	    Older     		     222	OpeningStock.php
+	    Older     		     233	OpeningStockChild.php
+	    Older     		     427	Pdfs.php
+	    Older     		     208	PMC.php
+	    Older     		     784	Product.php
+	    Older     		     225	ProductCategory.php
+	    Older     		     209	ProjectName.php
+	    Older     		     209	ProjectType.php
+	    Older     		     553	PurchaseInvoice.php
+	    Older     		     896	PurchaseInvoiceChild.php
+	    Older     		     556	PurchaseOrder.php
+	    Older     		     778	PurchaseOrderChild.php
+	    Older     		    1006	Quotation.php
+	    Older     		    1156	QuotationChild.php
+	    Older     		     570	QuotationMainChild.php
+	    Older     		     946	RevisedChild.php
+	    Older     		     319	RevisedMainChild.php
+	    Older     		     988	RevisedQuotation.php
+	    Older     		     207	Role.php
+	    Older     		     715	SalesOrder.php
+	    Older     		     694	SalesOrderChild.php
+	    Older     		     849	SalesOrderInvoice.php
+	    Older     		     874	SalesOrderInvoiceChild.php
+	    Older     		     207	Section.php
+	    Older     		     855	Service.php
+	    Older     		     657	ServiceChild.php
+	    Older     		     466	ServiceImage.php
+	    Older     		     217	SourceName.php
+	    Older     		     208	State.php
+	    Older     		     826	StockTransferHistory.php
+	    Older     		     207	Symbol.php
+	    Older     		     632	Task.php
+	    Older     		     750	Technician.php
+	    Older     		     438	TravelUpdate.php
+	    Older     		     204	Type.php
+	    Older     		     934	User.php
+	    Older     		     530	Vendor.php
+	    Older     		     741	Visits.php
+	    Older     		     545	VisitsChild.php
+	    Older     		     215	Warehouse.php
+	    Older     		     456	WarehouseInventory.php
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\app\Console\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\app\Console\Commands\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\app\Exceptions\
+	    Older     		    1109	Handler.php
+	                  12	d:\xampp\htdocs\patelinteriors.co.in\app\Exports\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\app\Http\
+	    Older     		    3257	Kernel.php
+	                  58	d:\xampp\htdocs\patelinteriors.co.in\app\Http\Controllers\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\app\Http\Controllers\Api\
+	                  14	d:\xampp\htdocs\patelinteriors.co.in\app\Http\Controllers\Api\V1\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\app\Http\Controllers\Auth\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\app\Http\Controllers\EmployeeAuth\
+	                  10	d:\xampp\htdocs\patelinteriors.co.in\app\Http\Controllers\Exports\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\app\Http\Controllers\UserAuth\
+	                  12	d:\xampp\htdocs\patelinteriors.co.in\app\Http\Middleware\
+	    Older     		     352	CheckForMaintenanceMode.php
+	    Older     		     549	RedirectIfAuthenticated.php
+	    Older     		     459	TrustProxies.php
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\app\Imports\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\app\Notifications\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\app\Providers\
+	    Older     		     431	AppServiceProvider.php
+	    Older     		    2752	RouteServiceProvider.php
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\bootstrap\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\bootstrap\cache\
+	    Older     		    2070	packages.php
+	    Older     		   14834	services.php
+	                  15	d:\xampp\htdocs\patelinteriors.co.in\config\
+	    Older     		    4837	mail.php
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\database\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\database\factories\
+	                  44	d:\xampp\htdocs\patelinteriors.co.in\database\migrations\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\database\seeds\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\
+	                  12	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\error\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\faq\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\inbox\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\invoices\
+	                  12	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\login\
+	                   8	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\pricing\
+	                  14	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\support-center\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\tasks\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\todo\
+	                   8	d:\xampp\htdocs\patelinteriors.co.in\public\assets\css\pages\wizard\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\editor\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\base\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\calendar\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\charts\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\charts\amcharts\
+	                  10	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\extended\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\maps\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\portlets\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\components\utils\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\datatables\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\datatables\advanced\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\datatables\basic\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\datatables\data-sources\
+	                  10	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\datatables\extensions\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\datatables\search-options\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\file-upload\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\forms\
+	                  10	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\forms\editors\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\forms\validation\
+	                  22	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\forms\widgets\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\metronic-datatable\
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\metronic-datatable\advanced\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\metronic-datatable\api\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\metronic-datatable\base\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\crud\metronic-datatable\child\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\chat\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\contacts\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\inbox\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\login\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\projects\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\tasks\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\todo\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\user\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\js\pages\custom\wizard\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\
+	                  17	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\bg\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\blog\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\client-logos\
+	                   8	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\company-logos\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\demos\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\demos\demo11\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\demos\demo12\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\demos\demo4\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\demos\demo8\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\demos\demo9\
+	                  22	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\demos\preview\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\envato\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\error\
+	                  10	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\files\
+	                 260	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\flags\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\
+	                  16	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Clothes\
+	                  38	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Code\
+	                  69	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Communication\
+	                  29	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Cooking\
+	                  62	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Design\
+	                  68	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Devices\
+	                  16	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Electric\
+	                  43	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Files\
+	                  31	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Food\
+	                  50	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\General\
+	                  67	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Home\
+	                  16	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Layout\
+	                  11	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Map\
+	                  41	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Media\
+	                  42	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Navigation\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Navigation\Stockholm-icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Navigation\Stockholm-icons\Navigation\
+	                  64	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Shopping\
+	                  28	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Text\
+	                  16	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Tools\
+	                  44	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\icons\svg\Weather\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\illustrations\
+	                  43	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\logos\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\misc\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\plugins\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\plugins\jstree\
+	                  28	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\products\
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\project-logos\
+	                  45	d:\xampp\htdocs\patelinteriors.co.in\public\assets\media\users\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\bootstrap-session-timeout\
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\bootstrap-session-timeout\examples\
+	                  11	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\.github\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\adapters\
+	                  71	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\lang\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\a11yhelp\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\
+	                  65	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\about\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\about\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\about\dialogs\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\adobeair\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\ajax\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\autocomplete\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\autocomplete\skins\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\autoembed\
+	                  42	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\autoembed\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\autogrow\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\autolink\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\skins\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\skins\kama\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\skins\moono\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\skins\moono\images\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\skins\moono\images\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\skins\moono-lisa\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\skins\moono-lisa\images\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloonpanel\skins\moono-lisa\images\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloontoolbar\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloontoolbar\skins\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloontoolbar\skins\kama\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloontoolbar\skins\moono\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\balloontoolbar\skins\moono-lisa\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\bbcode\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\bidi\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\bidi\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\bidi\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\bidi\lang\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\clipboard\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\clipboard\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\cloudservices\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippet\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippet\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippet\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippet\icons\hidpi\
+	                  54	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippet\lang\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippet\lib\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippet\lib\highlight\
+	                  47	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippet\lib\highlight\styles\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\codesnippetgeshi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\colorbutton\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\colorbutton\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\colorbutton\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\colorbutton\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\colordialog\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\colordialog\dialogs\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\colordialog\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\copyformatting\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\copyformatting\cursors\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\copyformatting\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\copyformatting\icons\hidpi\
+	                  15	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\copyformatting\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\copyformatting\styles\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\devtools\
+	                  57	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\devtools\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\dialog\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\dialogadvtab\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\div\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\div\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\div\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\div\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\div\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\divarea\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\docprops\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\docprops\dialogs\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\docprops\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\docprops\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\docprops\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\easyimage\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\easyimage\dialogs\
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\easyimage\icons\
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\easyimage\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\easyimage\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\easyimage\styles\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embed\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embed\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embed\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embedbase\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embedbase\dialogs\
+	                  40	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embedbase\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embedsemantic\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embedsemantic\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\embedsemantic\icons\hidpi\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\emoji\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\emoji\assets\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\emoji\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\emoji\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\emoji\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\emoji\skins\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\find\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\find\dialogs\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\find\icons\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\find\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\find\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\flash\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\flash\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\flash\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\flash\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\flash\images\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\flash\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\font\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\font\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\forms\
+	                   8	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\forms\dialogs\
+	                  12	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\forms\icons\
+	                  12	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\forms\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\forms\images\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\forms\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\iframe\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\iframe\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\iframe\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\iframe\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\iframe\images\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\iframe\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\iframedialog\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\image\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\image\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\image\images\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\image2\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\image2\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\image2\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\image2\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\image2\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\imagebase\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\imagebase\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\imagebase\styles\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\indentblock\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\justify\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\justify\icons\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\justify\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\language\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\language\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\language\icons\hidpi\
+	                  53	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\language\lang\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\link\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\link\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\link\images\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\link\images\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\liststyle\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\liststyle\dialogs\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\liststyle\lang\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\magicline\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\magicline\images\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\magicline\images\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\mathjax\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\mathjax\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\mathjax\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\mathjax\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\mathjax\images\
+	                  54	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\mathjax\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\mentions\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\newpage\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\newpage\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\newpage\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\newpage\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\pagebreak\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\pagebreak\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\pagebreak\icons\hidpi\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\pagebreak\images\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\pagebreak\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\panelbutton\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\pastefromword\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\pastefromword\filter\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\placeholder\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\placeholder\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\placeholder\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\placeholder\icons\hidpi\
+	                  56	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\placeholder\lang\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\preview\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\preview\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\preview\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\preview\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\print\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\print\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\print\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\print\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\save\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\save\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\save\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\save\lang\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\scayt\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\scayt\dialogs\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\scayt\skins\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\scayt\skins\moono-lisa\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\selectall\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\selectall\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\selectall\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\selectall\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\sharedspace\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\showblocks\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\showblocks\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\showblocks\icons\hidpi\
+	                  12	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\showblocks\images\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\showblocks\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\smiley\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\smiley\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\smiley\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\smiley\icons\hidpi\
+	                  44	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\smiley\images\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\smiley\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\sourcedialog\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\sourcedialog\dialogs\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\sourcedialog\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\sourcedialog\icons\hidpi\
+	                  69	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\sourcedialog\lang\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\specialchar\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\specialchar\dialogs\
+	                  59	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\specialchar\dialogs\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\stylesheetparser\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\table\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\table\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\tableresize\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\tableselection\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\tableselection\styles\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\tabletools\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\tabletools\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\templates\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\templates\dialogs\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\templates\icons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\templates\icons\hidpi\
+	                  70	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\templates\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\templates\templates\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\templates\templates\images\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\textmatch\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\textwatcher\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\uicolor\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\uicolor\dialogs\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\uicolor\icons\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\uicolor\icons\hidpi\
+	                  57	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\uicolor\lang\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\uploadfile\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\widget\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\widget\images\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\wsc\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\wsc\dialogs\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\wsc\skins\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\wsc\skins\moono-lisa\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\plugins\xml\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\css\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\img\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\js\
+	                  20	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\assets\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\assets\inlineall\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\assets\outputxhtml\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\assets\uilanguages\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\autocomplete\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\autogrow\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\bbcode\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\codesnippet\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\devtools\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\dialog\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\dialog\assets\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\divarea\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\docprops\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\easyimage\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\emoji\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\enterkey\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\htmlwriter\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\htmlwriter\assets\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\htmlwriter\assets\outputforflash\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\image2\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\image2\assets\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\magicline\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\mathjax\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\mentions\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\placeholder\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\sharedspace\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\sourcedialog\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\stylesheetparser\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\stylesheetparser\assets\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\tableresize\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\toolbar\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\uicolor\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\old\wysiwygarea\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\toolbarconfigurator\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\toolbarconfigurator\css\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\toolbarconfigurator\font\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\toolbarconfigurator\js\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\toolbarconfigurator\lib\
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\samples\toolbarconfigurator\lib\codemirror\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\
+	                  14	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\kama\
+	                   8	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\kama\images\
+	                  15	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\moono\
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\moono\images\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\moono\images\hidpi\
+	                  12	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\moono-lisa\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\moono-lisa\images\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\ckeditor\skins\moono-lisa\images\hidpi\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\ckeditor\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\datatables\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\flot\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\fullcalendar\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\gmaps\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\jquery-ui\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\jquery-ui\images\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\jqvmap\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\jstree\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\kanban\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\advlist\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\anchor\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\autolink\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\autoresize\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\autosave\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\bbcode\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\charmap\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\code\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\codesample\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\colorpicker\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\contextmenu\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\directionality\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\emoticons\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\emoticons\js\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\fullpage\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\fullscreen\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\help\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\hr\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\image\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\imagetools\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\importcss\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\insertdatetime\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\legacyoutput\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\link\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\lists\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\media\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\nonbreaking\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\noneditable\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\pagebreak\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\paste\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\preview\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\print\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\quickbars\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\save\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\searchreplace\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\spellchecker\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\tabfocus\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\table\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\template\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\textcolor\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\textpattern\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\toc\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\visualblocks\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\visualchars\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\plugins\wordcount\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\content\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\content\dark\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\content\default\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\content\document\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\content\writer\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\ui\
+	                  20	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\ui\oxide\
+	                  20	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\tinymce\skins\ui\oxide-dark\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\custom\uppy\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\flaticon\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\flaticon2\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\fonts\
+	                  15	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\fonts\@fortawesome\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\fonts\flaticon\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\fonts\flaticon2\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\fonts\line-awesome\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\fonts\socicon\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\fonts\summernote\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\images\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\public\assets\plugins\global\images\owl.carousel\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\css\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\public\js\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\resources\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\js\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\resources\js\components\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\resources\lang\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\lang\en\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\sass\
+	                  11	d:\xampp\htdocs\patelinteriors.co.in\resources\views\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\appointment_letter\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\arid\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\attendance\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\resources\views\auth\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\auth\passwords\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\brandlogo\
+	                   9	d:\xampp\htdocs\patelinteriors.co.in\resources\views\client\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\company\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\company_policy\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\resources\views\complains\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\consent_person\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\credit\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\debit\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\delivery\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\employee\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\employee\auth\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\employee\auth\passwords\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\resources\views\employee\layout\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\expense\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\gallery\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\resources\views\general\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\resources\views\group\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\gst\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\holiday\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\landmark\
+	                  10	d:\xampp\htdocs\patelinteriors.co.in\resources\views\layouts\
+	                  20	d:\xampp\htdocs\patelinteriors.co.in\resources\views\lead\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\lead\bkp\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\leadsource\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\leadstage\
+	                   7	d:\xampp\htdocs\patelinteriors.co.in\resources\views\leave\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\meeting_entry_employee\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\resources\views\openingstock\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\resources\views\pdf\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\pmc\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\product\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\productcategory\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\project_name\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\project_type\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\purchaseinvoice\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\purchaseorder\
+	    Older     		    5821	report.blade.php
+	                   9	d:\xampp\htdocs\patelinteriors.co.in\resources\views\quotations\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\resources\views\quotations\bkp\
+	                  15	d:\xampp\htdocs\patelinteriors.co.in\resources\views\report\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\resources\views\reports\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\revised\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\role\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\resources\views\sales\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\salesorder\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\salesorderinvoice\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\resources\views\section\
+	                   5	d:\xampp\htdocs\patelinteriors.co.in\resources\views\service\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\sourcename\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\symbol\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\resources\views\task\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\technician\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\travel_update\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\type\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\resources\views\user\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\user\auth\
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\resources\views\user\auth\passwords\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\resources\views\user\layout\
+	                   4	d:\xampp\htdocs\patelinteriors.co.in\resources\views\visits\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\resources\views\warehouse\
+	                   6	d:\xampp\htdocs\patelinteriors.co.in\routes\
+	                   0	d:\xampp\htdocs\patelinteriors.co.in\storage\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\storage\app\
+	  *EXTRA File 		    6212	gallery_new.xlsx
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\storage\app\public\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\storage\framework\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\storage\framework\cache\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\storage\framework\cache\laravel-excel\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\storage\framework\cache\data\
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\storage\framework\sessions\
+	  *EXTRA File 		     549	0sScqmJsyd1FeeKURWqkTKkgDn91bXMMomBGZeGU
+	  *EXTRA File 		     533	0VSqCLZmP32ecsE8aZUMUx7FSATk76yFvixM1PyY
+	  *EXTRA File 		     539	0wuAEOCRPAFMcHkpLJjuo01gZ48QIfk7p4s7I2kP
+	  *EXTRA File 		     549	1O8zjEpr5GFrpqFRF4iLmNnrE9nTwKLBgvoaDpY3
+	  *EXTRA File 		     568	1rLwxHumVgsLehExh5dffnoOqS281y3fkoFrhbWl
+	  *EXTRA File 		     539	3akMsu60CpnQPSuQOWpZdC6oOIrAdyPTqzArykct
+	  *EXTRA File 		     545	3Vaaq6VIALPo9Wkmu7GakBRv2hoImnV4j1PRrZ6m
+	  *EXTRA File 		     539	73iayoAKMBWZ7w7TyzQqPOF0yDHY81n1BUb6YCUJ
+	  *EXTRA File 		     539	8WNAsp8iRuoATvhxyrYI7WOlej9hpFtWytazO6EI
+	  *EXTRA File 		     545	aBRD3hDYqExf0uE183o8YFaYoBs8m7itzwnCkgBd
+	  *EXTRA File 		     561	aJAdjxEGy1soTbb2sMuubEQmYePZU4nLZTVcoqF1
+	  *EXTRA File 		     541	BGb4LmayXwYwDVtwnlWRvp08N1IHESut5qefh5PA
+	  *EXTRA File 		     541	bgPSJ9oBVGoKA2cfHKmC5wLOGsgCTms7p4beWHZC
+	  *EXTRA File 		     539	BIegp6ukFLB1sj57qUxHrcrzzlcKy1ylJVTlcnnA
+	  *EXTRA File 		     539	bkXwg55addgsGgVDXtONW8G9ezFKd8LaNGP3leeD
+	  *EXTRA File 		     551	C3YKXBuDKqzakkAqQ5ZVitwDiy538TCSy7jrC4IC
+	  *EXTRA File 		     545	cFyzwIRQptP15F9dKgLxTcGEjYie8e6mz7lpzK6y
+	  *EXTRA File 		     188	cy5aCJCgfsfcTkyXqhUh1BxhLAXcNSZ7QieSpsFj
+	  *EXTRA File 		     188	e0QrIzXzjSojIiOaeEVPXz4oietyjQ2cJ0lwvxKM
+	  *EXTRA File 		     551	eHsoxphBSCe2Dk49UHSDJeckBcvJvuemLZNBXjCD
+	  *EXTRA File 		     541	eJ52UTSi0eOHV20f4WBiJlUXIdFYRi3sOscjPAzD
+	  *EXTRA File 		     541	ePYZoyKyLNYdSq2YVRvADixVOP1PkYYXT7J3fWWU
+	  *EXTRA File 		     553	fidpGH5EGuC4HL9RZxm3e94ysPgcPLf9JAs9HACG
+	  *EXTRA File 		     529	g2kO6eagJ056WmhXDp8vLr16htgvZYdq036jgyP8
+	  *EXTRA File 		     545	gaEl1RMqDp1NxSvu33BTFqLeERSdXMx6b6wtXsWe
+	  *EXTRA File 		     545	gcjoyspRm9nu7MG3IQ741oFq2E9NJWKQF0w9fbyO
+	  *EXTRA File 		     543	gdpITqHW9kCA5CYxlKOa1VgkAGHJMbz04fHVttbx
+	  *EXTRA File 		     561	gPV6mUQmVRGY1gYpeY62B8d3MBQILoEO2KGdP9JN
+	  *EXTRA File 		     549	HnGqUZjG2vmQCuRdaBAdKqSpDVzsZhLUgUWv8Qe3
+	  *EXTRA File 		     545	HXFi9sqiRFizO7O0vRujDKV50FvxOSDyv4vVMKnl
+	  *EXTRA File 		     529	IL8ICGZJ51Hk9iAwThgchiwk9gYKzZSqPGy9qBIj
+	  *EXTRA File 		     559	iw1z8CODTctdNF4kkcTVCYK8w5hRXx9Vm1JnkWbb
+	  *EXTRA File 		     553	JEt52P0vvj6glLEqPyGEX1I8g1cjhlNZOAzsPsGJ
+	  *EXTRA File 		     545	JKhjdGtb0RGs75IwUqT9AjlWgbk1T7wlpawsVag2
+	  *EXTRA File 		     539	JNzCFKkr4JGnN0X1xzsKfU3fbNU7Hl8UypdZwaWL
+	  *EXTRA File 		     557	M1ylE2pXAqli6iY8gba60gEyNiIlAYx73ypAHxcD
+	  *EXTRA File 		     541	M219bajxvfm1pcPxWynwOsGnyORAWDgfvb4dg18e
+	  *EXTRA File 		     551	NcPpld45uB7NqVmoId7r6xC1juXVwlqzuD1erGWJ
+	  *EXTRA File 		     551	nHy8pmFoxOtq982JMO0wsEX56CeyFMpMJQAWKiPA
+	  *EXTRA File 		     539	Nm0M0x29zESSRZgW9jtccRsDgauKzxF2euEz4at2
+	  *EXTRA File 		     557	o5PHOiUwH8Zku1qbInobW6R13JpITSGPvnn3llFr
+	  *EXTRA File 		     551	oDL5XTxSV2fgtFd4uYCHfmyuVS8FCTroyIv3bwt9
+	  *EXTRA File 		     567	Pn79TYNINnAyOvMBIBUiSkruswZepw3g2W8R0hLk
+	  *EXTRA File 		     559	px3913eSKS2JTDiHi253ENiHOlvYs2bheehF3q5S
+	  *EXTRA File 		     543	pXyN9nlAg27WVnyePOeTrXJ3qDSL03bxsrTuG6LS
+	  *EXTRA File 		     541	q6KWLlURGWTF6xYWGdAXa1xeSPhnb8G4ENAlEgWl
+	  *EXTRA File 		     529	rIr9vVuzcfu9S6GXweobFdTVdFUfTB7bJw3sMpbW
+	  *EXTRA File 		     551	RmccDOg4hj2QaHlMtSGf0pONyxfKBXJvqFDSvyed
+	  *EXTRA File 		     549	RMNZCTgqNKNYOkVx6U5We9S3f3CqQSauq3Dzpv1f
+	  *EXTRA File 		     551	RvBEADQVT4i7tcTeHAwQfsa3nIECwo4qL7lRZAC7
+	  *EXTRA File 		     543	rZoqZgNSfBBq9kH4NT8SSmIPihbAd3WVi3yFtMjZ
+	  *EXTRA File 		     549	S2wykGL7QhVcNJkWLQhOjBzv0GIJWAPar0sRl5zi
+	  *EXTRA File 		     543	u9hE9Yi4XViDQBwV3E6lH3wwnujijGIBOEamHruU
+	  *EXTRA File 		     557	UpDg3ENWb1UuURRYrjUcV2TMXA5GLWD10lcbhkEz
+	  *EXTRA File 		     529	UznU5YCS9lFVgEDXnZKi1ATwoXx35gokQz6Vp4YA
+	  *EXTRA File 		     551	VO0LHjT7SBieIJSdwppYL2blQ41j39pZdUIfNYhd
+	  *EXTRA File 		     557	Vt5Vcqf0TGfEZsyIdrXxw4qRIzv34BlKe6Tz03C1
+	  *EXTRA File 		     545	WaYg662gLmhn0atTiVMadJzpf7jhFeEXaNDHKiSt
+	  *EXTRA File 		     533	WkZqxOhcP6bZ6KcrI374DHRoJVaQVME8Bwv4oIKI
+	  *EXTRA File 		     568	wrLzFgkm6D7WB2q9YIgKsTpMk5mS9KtHJDi3YPqD
+	  *EXTRA File 		     567	XiyeHabeVCw3yORDF4M7Bz1O9312GtUk277sy861
+	  *EXTRA File 		     549	XL6M1z6urRD0ADtvPoGxo1E2jBL2pJfe23OH76KD
+	  *EXTRA File 		     545	xnDY5FZwnSNgtqq4foJsqwvwADDZLr82g7bHsZp7
+	  *EXTRA File 		     543	xRnpQPR07J5Ak5cubhcPrp5cs8XIoMZ9ur7lQ1f6
+	  *EXTRA File 		     543	Z0Fk0VdQG7DDx0EtHSN69CPIAAn71G520O2qQqU8
+	  *EXTRA File 		     545	ZfHhE9JaWeym0kYcrCfq7qRXCULW1XvP6LtZwV01
+	    New File  		     179	iUjrfBPDViomy0seekxQv1MY2cKVAzFjjxTxINEC
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\storage\framework\testing\
+	                   8	d:\xampp\htdocs\patelinteriors.co.in\storage\framework\views\
+	  *EXTRA File 		     527	04a1c247a707e308a3ca8333cc36122a.php
+	  *EXTRA File 		    4019	1f6fe2f0f0c7772adcda3fab551118fc.php
+	  *EXTRA File 		    6122	41915e2f669284f3dbe284555fda5c6d.php
+	  *EXTRA File 		   33856	69c160bd90e2d014530a6153ed3fa6fc.php
+	  *EXTRA File 		    3800	73b09c50e6ba0e242f859dedbec386c7.php
+	  *EXTRA File 		    1103	80fff73824af749bf23e9dc7f9ca0f96.php
+	  *EXTRA File 		   12027	8ea955de7b1f11ce8f0cc07dc062452e.php
+	  *EXTRA File 		    6789	a4bf757683bd56dd9caf535815574435.php
+	  *EXTRA File 		    2659	c2e4860c779de6a788e785d07c9fe654.php
+	  *EXTRA File 		    1818	d598dcc6d39949ca4895bd1b179ccaf5.php
+	  *EXTRA File 		   83088	d621122a6e7b60c1536c9bf4f11cf67e.php
+	  *EXTRA File 		    7420	d6663d6df8ab03e48286b8064b046cd3.php
+	    New File  		   33858	0b1d2a48b42522641ed352bc4767faeecd013f41.php
+	    New File  		     544	1452a74ff8df92d727ea436415be2806c28d577d.php
+	    New File  		   83085	2952f95a24213f17aad82377890398b7c4e198d0.php
+	    New File  		    7420	834920a25814436d293a1fbffbe6445a22cd941b.php
+	    New File  		    2655	d335c381ec08b53ab76805bba580bcb21a52cead.php
+	    New File  		    4015	d57caab391cf45314f4bac092f23d97de1a3f00b.php
+	    New File  		    3796	ececfc2c72d81ab095cccaf1313c4e7974aaa7fd.php
+	                   3	d:\xampp\htdocs\patelinteriors.co.in\storage\logs\
+	    Older     		   36121	laravel-2026-11-06.log
+	                   2	d:\xampp\htdocs\patelinteriors.co.in\tests\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\tests\Feature\
+	*EXTRA Dir        -1	d:\xampp\htdocs\PATELINTERIORS-laravel12\tests\Feature\Upgrade\
+	                   1	d:\xampp\htdocs\patelinteriors.co.in\tests\Unit\

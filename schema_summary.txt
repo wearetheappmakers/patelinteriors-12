@@ -1,0 +1,2250 @@
+=== PATEL.SQL SCHEMA SUMMARY ===
+Generated on: 2026-11-06 06:55:28
+
+--- DUMP HEADER ---
+-- phpMyAdmin SQL Dump
+-- version 5.2.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Nov 06, 2026 at 05:32 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.3.36
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
+-------------------
+
+--- CREATE TABLE appointment_letter ---
+CREATE TABLE `appointment_letter` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `employee_name` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `joining_date` varchar(255) DEFAULT NULL,
+  `hr_admin` varchar(255) DEFAULT NULL,
+  `position` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `basic_month` varchar(255) DEFAULT NULL,
+  `basic_annual` varchar(255) DEFAULT NULL,
+  `hra_month` varchar(255) DEFAULT NULL,
+  `hra_annual` varchar(255) DEFAULT NULL,
+  `convenyance_allowance_month` varchar(255) DEFAULT NULL,
+  `convenyance_allowance_annual` varchar(255) DEFAULT NULL,
+  `special_month` varchar(255) DEFAULT NULL,
+  `special_annual` varchar(255) DEFAULT NULL,
+  `deductions_month` varchar(255) DEFAULT NULL,
+  `deductions_annual` varchar(255) DEFAULT NULL,
+  `pt_month` varchar(255) DEFAULT NULL,
+  `pt_annual` varchar(255) DEFAULT NULL,
+  `deposit_amt_month` varchar(255) DEFAULT NULL,
+  `deposit_amt_annual` varchar(255) DEFAULT NULL,
+  `total_deductions_month` varchar(255) DEFAULT NULL,
+  `total_deductions_annual` varchar(255) DEFAULT NULL,
+  `net_salary_month` varchar(255) DEFAULT NULL,
+  `net_salary_annual` varchar(255) DEFAULT NULL,
+  `signature_upload` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE arid ---
+CREATE TABLE `arid` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) NOT NULL,
+  `employee_id` int(11) NOT NULL,
+  `type` int(11) NOT NULL COMMENT '1=ar,2=id',
+  `name` varchar(255) NOT NULL,
+  `number` varchar(255) NOT NULL,
+  `office_no` varchar(255) DEFAULT NULL,
+  `firm_name` varchar(255) DEFAULT NULL,
+  `firm_address` varchar(255) DEFAULT NULL,
+  `country_id` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `dob` varchar(255) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE attendance ---
+CREATE TABLE `attendance` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `attendance` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `photo` varchar(200) DEFAULT NULL,
+  `latitude` varchar(200) DEFAULT NULL,
+  `longitude` varchar(200) DEFAULT NULL,
+  `attendance_status` int(11) NOT NULL DEFAULT 0 COMMENT ' 	1=On Time, 2=Late',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE brand_logos ---
+CREATE TABLE `brand_logos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `brand_logo` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE city ---
+CREATE TABLE `city` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `state_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE client ---
+CREATE TABLE `client` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `type` varchar(255) NOT NULL DEFAULT '1',
+  `member` varchar(255) DEFAULT NULL,
+  `member_code` varchar(255) DEFAULT NULL,
+  `company` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `landmark_id` int(11) DEFAULT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  `state_id` int(11) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `mobile_no` varchar(255) DEFAULT NULL,
+  `other_mobile_no` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `referred_type` int(10) UNSIGNED DEFAULT NULL,
+  `dob` varchar(255) DEFAULT NULL,
+  `is_archive` varchar(255) NOT NULL DEFAULT '0',
+  `status` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE client_document ---
+CREATE TABLE `client_document` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `client_id` int(10) UNSIGNED DEFAULT NULL,
+  `product_id` int(10) UNSIGNED DEFAULT NULL,
+  `lead_id` int(10) UNSIGNED DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `aadhar_card` varchar(255) DEFAULT NULL,
+  `aadhar_img` varchar(255) DEFAULT NULL,
+  `pan_card` varchar(255) DEFAULT NULL,
+  `pan_img` varchar(255) DEFAULT NULL,
+  `cancelled_cheque` varchar(255) DEFAULT NULL,
+  `cancelledcheque_img` varchar(255) DEFAULT NULL,
+  `rtgs_details` varchar(255) DEFAULT NULL,
+  `rtgs_img` varchar(255) DEFAULT NULL,
+  `form_submission` varchar(255) DEFAULT NULL,
+  `form_submission_img` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `tracking_no` varchar(255) DEFAULT NULL,
+  `tracking_link` varchar(255) DEFAULT NULL,
+  `distributor_id` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `machine_delivered` varchar(255) DEFAULT NULL,
+  `machine_delivered_img` varchar(255) DEFAULT NULL,
+  `gst` int(11) DEFAULT NULL,
+  `gst_img` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE companies ---
+CREATE TABLE `companies` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `pro_category_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE company_policy ---
+CREATE TABLE `company_policy` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `policy_description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE complain ---
+CREATE TABLE `complain` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `mobile_no` varchar(255) DEFAULT NULL,
+  `company` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `problem` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `reference_no` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '0',
+  `note` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE consent_person ---
+CREATE TABLE `consent_person` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `number` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE country ---
+CREATE TABLE `country` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `sortname` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `phonecode` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE credit ---
+CREATE TABLE `credit` (
+  `id` int(11) NOT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `client_id` varchar(255) DEFAULT NULL,
+  `invoice_id` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `total_qty` varchar(255) DEFAULT NULL,
+  `total_discount_amt` varchar(255) DEFAULT NULL,
+  `total_gst_amt` varchar(255) DEFAULT NULL,
+  `total_amount` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE credit_child ---
+CREATE TABLE `credit_child` (
+  `id` int(11) NOT NULL,
+  `credit_id` varchar(255) DEFAULT NULL,
+  `sales_invoice_child_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `warehouse_id` varchar(255) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `pending_qty` varchar(255) DEFAULT NULL,
+  `rate` varchar(255) DEFAULT NULL,
+  `discount_per` varchar(255) DEFAULT NULL,
+  `discount_amt` varchar(255) DEFAULT NULL,
+  `gst` varchar(255) DEFAULT NULL,
+  `gst_id` varchar(255) DEFAULT NULL,
+  `gst_amt` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE debit ---
+CREATE TABLE `debit` (
+  `id` int(11) NOT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `vendor_id` varchar(255) DEFAULT NULL,
+  `invoice_id` int(11) NOT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `remark` text DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `total_qty` varchar(255) DEFAULT NULL,
+  `total_discount` varchar(255) DEFAULT NULL,
+  `total_gst` varchar(255) DEFAULT NULL,
+  `total_amount` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE debit_child ---
+CREATE TABLE `debit_child` (
+  `id` int(11) NOT NULL,
+  `debit_id` varchar(255) DEFAULT NULL,
+  `invoice_child_id` int(11) NOT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `warehouse_id` varchar(255) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `rate` varchar(255) DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `discount_amount` varchar(255) DEFAULT NULL,
+  `gst` varchar(255) DEFAULT NULL,
+  `gst_amt` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE delivery ---
+CREATE TABLE `delivery` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `quotation_id` int(10) UNSIGNED DEFAULT NULL,
+  `client_id` int(10) UNSIGNED DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE delivery_log ---
+CREATE TABLE `delivery_log` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `quotation_id` int(10) UNSIGNED DEFAULT NULL,
+  `product_id` int(10) UNSIGNED DEFAULT NULL,
+  `qty` varchar(255) NOT NULL DEFAULT '0',
+  `used` varchar(255) NOT NULL DEFAULT '0',
+  `date` varchar(255) NOT NULL DEFAULT '0',
+  `return` varchar(255) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE download ---
+CREATE TABLE `download` (
+  `id` int(11) NOT NULL,
+  `file_name` varchar(200) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE employees ---
+CREATE TABLE `employees` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `general_manager` varchar(255) DEFAULT NULL,
+  `manager` varchar(255) DEFAULT NULL,
+  `sales_area_manager` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `mobile_no` varchar(255) DEFAULT NULL,
+  `other_mobile_no` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `confirm_password` varchar(255) DEFAULT NULL,
+  `dob` varchar(255) DEFAULT NULL,
+  `join_date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '0',
+  `image` varchar(255) DEFAULT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
+  `push_token` varchar(2000) DEFAULT NULL,
+  `office_start_time` time DEFAULT NULL,
+  `buffer_time` varchar(50) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE employee_child ---
+CREATE TABLE `employee_child` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE employee_password_resets ---
+CREATE TABLE `employee_password_resets` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE expense ---
+CREATE TABLE `expense` (
+  `id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE expense_child ---
+CREATE TABLE `expense_child` (
+  `id` int(11) NOT NULL,
+  `expense_id` int(11) DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `bill_upload` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE followup_log ---
+CREATE TABLE `followup_log` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `lead_id` int(11) DEFAULT NULL,
+  `subject` text DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `is_completed` varchar(255) DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE galleries ---
+CREATE TABLE `galleries` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `gallery` varchar(255) DEFAULT NULL,
+  `productcategory_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE group ---
+CREATE TABLE `group` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `pc` varchar(255) DEFAULT NULL,
+  `user` varchar(255) DEFAULT NULL,
+  `product` varchar(255) DEFAULT NULL,
+  `lead` varchar(255) DEFAULT NULL,
+  `complain` varchar(255) DEFAULT NULL,
+  `quot` varchar(255) DEFAULT NULL,
+  `super` varchar(255) DEFAULT NULL,
+  `employee` varchar(255) DEFAULT NULL,
+  `distri` varchar(255) DEFAULT NULL,
+  `section` varchar(255) DEFAULT NULL,
+  `stage` varchar(255) DEFAULT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `gst` varchar(255) DEFAULT NULL,
+  `client` varchar(255) DEFAULT NULL,
+  `quotation_footer` varchar(255) DEFAULT NULL,
+  `contact` varchar(255) DEFAULT NULL,
+  `amc` varchar(255) DEFAULT NULL,
+  `task` varchar(255) DEFAULT NULL,
+  `member` varchar(255) DEFAULT NULL,
+  `template` varchar(255) DEFAULT NULL,
+  `a_keyword` varchar(255) DEFAULT NULL,
+  `system_a` varchar(255) DEFAULT NULL,
+  `autoresponder` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE gst ---
+CREATE TABLE `gst` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `gst` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE holiday ---
+CREATE TABLE `holiday` (
+  `id` int(11) NOT NULL,
+  `from_date` varchar(255) DEFAULT NULL,
+  `to_date` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE interior_visit ---
+CREATE TABLE `interior_visit` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `arid` int(11) DEFAULT NULL,
+  `architect_id` int(11) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `time` time DEFAULT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
+  `showroom_visit` varchar(255) DEFAULT NULL,
+  `company_person` varchar(255) DEFAULT NULL,
+  `pmc_id` varchar(255) DEFAULT NULL,
+  `assistant` varchar(255) DEFAULT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `number` varchar(255) DEFAULT NULL,
+  `firm_name` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE interior_visit_child ---
+CREATE TABLE `interior_visit_child` (
+  `id` int(11) NOT NULL,
+  `interior_visit_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE item_ledger ---
+CREATE TABLE `item_ledger` (
+  `id` int(11) NOT NULL,
+  `date` date DEFAULT NULL,
+  `tran_type` varchar(255) DEFAULT NULL,
+  `vendor_id` int(11) DEFAULT NULL,
+  `client_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `warehouse_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `product_code` varchar(255) DEFAULT NULL,
+  `invoice_no` varchar(255) DEFAULT NULL,
+  `purchaseinvoice_id` int(11) DEFAULT NULL,
+  `purchaseinvoice_child_id` int(11) DEFAULT NULL,
+  `salesinvoice_id` int(11) DEFAULT NULL,
+  `salesinvoice_child_id` int(11) DEFAULT NULL,
+  `inward` varchar(255) NOT NULL DEFAULT '0',
+  `outward` varchar(255) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE iv_followup ---
+CREATE TABLE `iv_followup` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `iv_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `subject` text DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `status_date` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `is_completed` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE iv_followup_log ---
+CREATE TABLE `iv_followup_log` (
+  `id` int(11) NOT NULL,
+  `iv_id` int(11) DEFAULT NULL,
+  `subject` text DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `is_completed` varchar(255) DEFAULT NULL,
+  `status_date` varchar(200) DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE landmark ---
+CREATE TABLE `landmark` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE lead ---
+CREATE TABLE `lead` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `client_id` int(10) UNSIGNED DEFAULT NULL,
+  `lead_name` varchar(255) DEFAULT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `project_type_id` int(11) DEFAULT NULL,
+  `project_name_id` int(11) DEFAULT NULL,
+  `arid_id` int(11) DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `source_id` int(10) UNSIGNED DEFAULT NULL,
+  `source_name` varchar(255) DEFAULT NULL,
+  `productcategory_id` int(10) UNSIGNED DEFAULT NULL,
+  `reason` varchar(255) DEFAULT NULL,
+  `product_id` int(10) UNSIGNED DEFAULT NULL,
+  `no_of_machines` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `current_project_phase` longtext DEFAULT NULL,
+  `lead_value` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `showroom` int(11) NOT NULL DEFAULT 2 COMMENT 'Yes=1,No=2',
+  `active` varchar(255) NOT NULL DEFAULT '1',
+  `app_link` varchar(255) DEFAULT NULL,
+  `employee_app_link` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE lead_assign ---
+CREATE TABLE `lead_assign` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `lead_id` int(10) UNSIGNED DEFAULT NULL,
+  `stage_id` int(10) UNSIGNED DEFAULT NULL,
+  `section_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` varchar(255) DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE lead_basic_child ---
+CREATE TABLE `lead_basic_child` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `lead_basic_main_id` int(11) NOT NULL,
+  `lead_id` int(10) UNSIGNED DEFAULT NULL,
+  `productcategory_id` int(10) UNSIGNED DEFAULT NULL,
+  `company_id` int(10) UNSIGNED DEFAULT NULL,
+  `product_id` int(10) UNSIGNED DEFAULT NULL,
+  `warehouse_id` int(11) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE lead_basic_design_child ---
+CREATE TABLE `lead_basic_design_child` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `lead_id` int(10) UNSIGNED DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `design` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE lead_basic_main_child ---
+CREATE TABLE `lead_basic_main_child` (
+  `id` int(11) NOT NULL,
+  `lead_id` int(11) NOT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `name` varchar(200) DEFAULT NULL,
+  `symbol` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE lead_basic_quotation_child ---
+CREATE TABLE `lead_basic_quotation_child` (
+  `id` int(11) NOT NULL,
+  `lead_id` int(11) DEFAULT NULL,
+  `quotation_date` varchar(255) DEFAULT NULL,
+  `quotation_image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE lead_communication ---
+CREATE TABLE `lead_communication` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `lead_id` int(10) UNSIGNED DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `autoresponder` varchar(255) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `message` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE lead_followup ---
+CREATE TABLE `lead_followup` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `lead_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `subject` text DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `time` varchar(255) DEFAULT NULL,
+  `status_date` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `is_completed` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE lead_source ---
+CREATE TABLE `lead_source` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE lead_stage ---
+CREATE TABLE `lead_stage` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `color` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1',
+  `is_completed` varchar(255) DEFAULT NULL,
+  `is_canceled` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE lead_toshow ---
+CREATE TABLE `lead_toshow` (
+  `id` int(11) NOT NULL,
+  `lead_id` int(11) DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `emp_description` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE leaves ---
+CREATE TABLE `leaves` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `from_date` varchar(255) DEFAULT NULL,
+  `to_date` varchar(255) DEFAULT NULL,
+  `approved_from_date` varchar(255) DEFAULT NULL,
+  `approved_to_date` varchar(255) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `reason` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `app_link` varchar(255) DEFAULT NULL,
+  `employee_app_link` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE meeting_entry_emp ---
+CREATE TABLE `meeting_entry_emp` (
+  `id` int(11) NOT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `sch_date` varchar(255) DEFAULT NULL,
+  `sch_time` varchar(255) DEFAULT NULL,
+  `client_name` varchar(225) DEFAULT NULL,
+  `contact_no` varchar(225) DEFAULT NULL,
+  `purpose_of_meeting` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE migrations ---
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE opening_stock ---
+CREATE TABLE `opening_stock` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `fy_year` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE opening_stock_child ---
+CREATE TABLE `opening_stock_child` (
+  `id` int(11) NOT NULL,
+  `os_id` int(11) DEFAULT NULL,
+  `pro_id` int(11) DEFAULT NULL,
+  `warehouse_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `qty` varchar(252) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE password_resets ---
+CREATE TABLE `password_resets` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE pdfs ---
+CREATE TABLE `pdfs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `customer_name` varchar(255) DEFAULT NULL,
+  `site_address` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact_no` varchar(255) DEFAULT NULL,
+  `architect` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `quotation_no` varchar(255) DEFAULT NULL,
+  `designer` varchar(255) DEFAULT NULL,
+  `sales_contact` varchar(255) DEFAULT NULL,
+  `model` varchar(255) DEFAULT NULL,
+  `f_base` varchar(255) DEFAULT NULL,
+  `f_wall` varchar(255) DEFAULT NULL,
+  `f_tall` varchar(255) DEFAULT NULL,
+  `carcase_combination` varchar(255) DEFAULT NULL,
+  `glass` varchar(255) DEFAULT NULL,
+  `fillers_panels` varchar(255) DEFAULT NULL,
+  `drawers_internals` varchar(255) DEFAULT NULL,
+  `handles` varchar(255) DEFAULT NULL,
+  `plinth_colour` varchar(255) DEFAULT NULL,
+  `cornish` varchar(255) DEFAULT NULL,
+  `plinth_height` varchar(255) DEFAULT NULL,
+  `kitchen_appliances` varchar(255) DEFAULT NULL,
+  `sitchen_sink` varchar(255) DEFAULT NULL,
+  `core_cutting` varchar(255) DEFAULT NULL,
+  `worktop` varchar(255) DEFAULT NULL,
+  `kitchen_furniture` varchar(255) DEFAULT NULL,
+  `customer_pan_no` varchar(255) DEFAULT NULL,
+  `billing_name_no` varchar(255) DEFAULT NULL,
+  `project` varchar(255) DEFAULT NULL,
+  `worktop_height` varchar(255) DEFAULT NULL,
+  `appliances_sink_accessories` varchar(255) DEFAULT NULL,
+  `worktop_dado` varchar(255) DEFAULT NULL,
+  `ducting_gas_piping` varchar(255) DEFAULT NULL,
+  `pdf_name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE pmc ---
+CREATE TABLE `pmc` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `number` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `contact_person` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE product ---
+CREATE TABLE `product` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `company_id` int(10) UNSIGNED DEFAULT NULL,
+  `productcategory_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `product` longtext DEFAULT NULL,
+  `unit` varchar(255) DEFAULT NULL,
+  `code` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `image1` varchar(255) DEFAULT NULL,
+  `image2` varchar(255) DEFAULT NULL,
+  `discount_type` varchar(255) DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE product_category ---
+CREATE TABLE `product_category` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE project_name ---
+CREATE TABLE `project_name` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE project_type ---
+CREATE TABLE `project_type` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE purchase_invoice ---
+CREATE TABLE `purchase_invoice` (
+  `id` int(11) NOT NULL,
+  `ids` varchar(255) DEFAULT NULL,
+  `purchase_id` varchar(255) DEFAULT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `vendor_id` varchar(255) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `total_qty` varchar(255) DEFAULT NULL,
+  `total_discount` varchar(255) DEFAULT NULL,
+  `total_gst` varchar(255) DEFAULT NULL,
+  `total_amount` varchar(255) DEFAULT NULL,
+  `invoice_no` varchar(255) DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1',
+  `flat_discount` varchar(255) DEFAULT NULL,
+  `labour_charges` varchar(255) DEFAULT NULL,
+  `transport_charges` varchar(255) DEFAULT NULL,
+  `grand_total` varchar(255) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE purchase_invoice_child ---
+CREATE TABLE `purchase_invoice_child` (
+  `id` int(11) NOT NULL,
+  `invoice_id` varchar(255) DEFAULT NULL,
+  `purchase_child_id` varchar(255) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `warehouse_id` varchar(255) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `pending_qty` varchar(255) DEFAULT NULL,
+  `pending_return_qty` varchar(255) DEFAULT NULL,
+  `rate` varchar(255) DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `discount_amount` varchar(255) DEFAULT NULL,
+  `gst` varchar(255) DEFAULT NULL,
+  `gst_amt` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `new_qty` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE purchase_order ---
+CREATE TABLE `purchase_order` (
+  `id` int(11) NOT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `vendor_id` varchar(255) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `total_amount` varchar(255) DEFAULT NULL,
+  `total_qty` varchar(255) DEFAULT NULL,
+  `total_discount` varchar(255) DEFAULT NULL,
+  `total_gst` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE purchase_order_child ---
+CREATE TABLE `purchase_order_child` (
+  `id` int(11) NOT NULL,
+  `purchase_order_id` varchar(255) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `warehouse_id` varchar(255) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `rate` varchar(255) DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `discount_amount` varchar(255) DEFAULT NULL,
+  `gst` varchar(255) DEFAULT NULL,
+  `gst_amt` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `pending_qty` varchar(255) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE quotation ---
+CREATE TABLE `quotation` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `client_id` int(10) UNSIGNED DEFAULT NULL,
+  `quotation_date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `source_name` varchar(255) DEFAULT NULL,
+  `final_amount` varchar(255) DEFAULT NULL,
+  `lead_id` int(11) DEFAULT NULL,
+  `q_price` int(11) DEFAULT NULL,
+  `q_price2` int(11) DEFAULT NULL,
+  `q_price3` int(11) DEFAULT NULL,
+  `q_price4` int(11) DEFAULT NULL,
+  `image` int(11) NOT NULL DEFAULT 0,
+  `code` int(11) NOT NULL DEFAULT 0,
+  `item_name` int(11) NOT NULL DEFAULT 0,
+  `description` int(11) NOT NULL DEFAULT 0,
+  `qty` int(11) NOT NULL DEFAULT 0,
+  `mrp` int(11) NOT NULL DEFAULT 0,
+  `discount` int(11) NOT NULL DEFAULT 0,
+  `discount_price` int(11) NOT NULL DEFAULT 0,
+  `sp_price` int(11) NOT NULL DEFAULT 0,
+  `gst` int(11) NOT NULL DEFAULT 0,
+  `gst_amt` int(11) NOT NULL DEFAULT 0,
+  `sp_price_total` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE quotation_child ---
+CREATE TABLE `quotation_child` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `quotation_id` int(10) UNSIGNED DEFAULT NULL,
+  `quot_main_child_id` int(11) NOT NULL,
+  `productcategory_id` int(10) UNSIGNED DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `product_id` int(10) UNSIGNED DEFAULT NULL,
+  `warehouse_id` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `value_of_amount` varchar(255) DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `gst_id` int(11) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `total` varchar(255) DEFAULT NULL,
+  `delivery_date` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE quotation_main_child ---
+CREATE TABLE `quotation_main_child` (
+  `id` int(11) NOT NULL,
+  `quot_id` int(11) NOT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `symbol` varchar(255) DEFAULT NULL,
+  `name` varchar(200) DEFAULT NULL,
+  `is_hide` int(11) NOT NULL DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE remainder ---
+CREATE TABLE `remainder` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `client_id` int(10) UNSIGNED DEFAULT NULL,
+  `quotation_id` int(10) UNSIGNED DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `quotation_date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `final_amount` varchar(255) DEFAULT NULL,
+  `lead_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE revised_child ---
+CREATE TABLE `revised_child` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `revised_id` int(10) UNSIGNED DEFAULT NULL,
+  `revised_main_child_id` int(11) NOT NULL,
+  `quotation_id` int(10) UNSIGNED DEFAULT NULL,
+  `productcategory_id` int(10) UNSIGNED DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `product_id` int(10) UNSIGNED DEFAULT NULL,
+  `warehouse_id` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `value_of_amount` varchar(255) DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `gst_id` int(11) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `total` varchar(255) DEFAULT NULL,
+  `delivery_date` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE revised_main_child ---
+CREATE TABLE `revised_main_child` (
+  `id` int(11) NOT NULL,
+  `revised_id` int(11) NOT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `name` varchar(200) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE revised_quotation ---
+CREATE TABLE `revised_quotation` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `client_id` int(10) UNSIGNED DEFAULT NULL,
+  `quotation_id` int(10) UNSIGNED DEFAULT NULL,
+  `revised` varchar(255) DEFAULT NULL,
+  `quotation_date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `final_amount` varchar(255) DEFAULT NULL,
+  `lead_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE role ---
+CREATE TABLE `role` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` varchar(255) DEFAULT NULL,
+  `updated_at` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE salesorder ---
+CREATE TABLE `salesorder` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `total_qty` varchar(255) DEFAULT NULL,
+  `total_discount_amt` varchar(255) DEFAULT NULL,
+  `total_gst_amt` varchar(255) DEFAULT NULL,
+  `total_amount` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '0' COMMENT '0=pending, 1=complete, 2=partial ',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE salesorder_child ---
+CREATE TABLE `salesorder_child` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `salesorder_id` int(10) UNSIGNED DEFAULT NULL,
+  `productcategory_id` int(11) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `product_id` int(10) UNSIGNED DEFAULT NULL,
+  `warehouse_id` int(11) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `rate` varchar(255) DEFAULT NULL,
+  `discount_per` varchar(255) DEFAULT NULL,
+  `discount_amt` varchar(255) DEFAULT NULL,
+  `gst_id` int(11) DEFAULT NULL,
+  `gst` varchar(255) DEFAULT NULL,
+  `gst_amt` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `pending_qty` varchar(255) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE salesorder_invoice ---
+CREATE TABLE `salesorder_invoice` (
+  `id` int(11) NOT NULL,
+  `ids` varchar(255) DEFAULT NULL,
+  `salesorder_id` varchar(255) DEFAULT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `employee_id` varchar(255) DEFAULT NULL,
+  `client_id` varchar(255) DEFAULT NULL,
+  `invoice_no` varchar(255) DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `pending_so` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `total_qty` varchar(255) DEFAULT NULL,
+  `total_discount_amt` varchar(255) DEFAULT NULL,
+  `total_gst_amt` varchar(255) DEFAULT NULL,
+  `total_amount` varchar(255) DEFAULT NULL,
+  `flat_discount` varchar(255) DEFAULT NULL,
+  `labour_charges` varchar(255) DEFAULT NULL,
+  `transport_charges` varchar(255) DEFAULT NULL,
+  `grand_total` varchar(255) DEFAULT NULL,
+  `date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1' COMMENT '1=pending ,2=credit',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE salesorder_invoice_child ---
+CREATE TABLE `salesorder_invoice_child` (
+  `id` int(11) NOT NULL,
+  `invoice_id` varchar(255) DEFAULT NULL,
+  `salesorder_child_id` varchar(255) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `warehouse_id` varchar(255) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `blocking_qty` int(11) DEFAULT NULL,
+  `rate` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `discount` varchar(255) DEFAULT NULL,
+  `discount_amt` varchar(255) DEFAULT NULL,
+  `gst` varchar(255) DEFAULT NULL,
+  `gst_id` varchar(255) DEFAULT NULL,
+  `gst_amt` varchar(255) DEFAULT NULL,
+  `pending_qty` varchar(255) DEFAULT NULL,
+  `new_qty` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE section ---
+CREATE TABLE `section` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE service ---
+CREATE TABLE `service` (
+  `id` int(11) NOT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `employee_id` varchar(255) DEFAULT NULL,
+  `client_id` varchar(255) DEFAULT NULL,
+  `consent_person_id` varchar(255) DEFAULT NULL,
+  `phone_no` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `complain_no` varchar(255) DEFAULT NULL,
+  `register_date` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `type` int(11) NOT NULL DEFAULT 0,
+  `remark` varchar(255) DEFAULT NULL,
+  `completed_date` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE service_child ---
+CREATE TABLE `service_child` (
+  `id` int(11) NOT NULL,
+  `service_id` varchar(255) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `category_id` varchar(255) DEFAULT NULL,
+  `company_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `technician_id` int(11) DEFAULT NULL,
+  `qty` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE service_image ---
+CREATE TABLE `service_image` (
+  `id` int(11) NOT NULL,
+  `service_id` int(11) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE source_names ---
+CREATE TABLE `source_names` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `lead_sourceid` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `phoneno` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `birth_date` date DEFAULT NULL,
+  `anniversary_date` date DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE state ---
+CREATE TABLE `state` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE stock_transfer_history ---
+CREATE TABLE `stock_transfer_history` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `transfer_date` date NOT NULL,
+  `branch_id` bigint(20) UNSIGNED NOT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `from_warehouse_id` bigint(20) UNSIGNED NOT NULL,
+  `to_warehouse_id` bigint(20) UNSIGNED NOT NULL,
+  `product_id` bigint(20) UNSIGNED NOT NULL,
+  `qty` int(11) NOT NULL DEFAULT 0,
+  `inward` int(11) NOT NULL DEFAULT 0,
+  `outward` int(11) NOT NULL DEFAULT 0,
+  `remark` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE symbol ---
+CREATE TABLE `symbol` (
+  `id` int(11) NOT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE task ---
+CREATE TABLE `task` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `employee_id` int(10) UNSIGNED DEFAULT NULL,
+  `client_id` int(11) DEFAULT NULL,
+  `assign_to` int(10) UNSIGNED DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '0',
+  `name` varchar(255) DEFAULT NULL,
+  `mobile` varchar(255) DEFAULT NULL,
+  `purpose` varchar(255) DEFAULT NULL,
+  `app_link` varchar(255) DEFAULT NULL,
+  `employee_app_link` varchar(255) DEFAULT NULL,
+  `is_completed` varchar(255) NOT NULL DEFAULT '0',
+  `description` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE technician ---
+CREATE TABLE `technician` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) NOT NULL,
+  `employee_id` int(11) NOT NULL,
+  `productcategory_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `technician_name` varchar(200) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE travel_update ---
+CREATE TABLE `travel_update` (
+  `id` int(10) NOT NULL,
+  `employee_id` int(10) DEFAULT NULL,
+  `branch_id` int(10) DEFAULT NULL,
+  `sch_date` varchar(255) DEFAULT NULL,
+  `sch_time` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `contact_no` varchar(255) DEFAULT NULL,
+  `purpose_of_travel` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE types ---
+CREATE TABLE `types` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE users ---
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `group_id` int(10) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `number` varchar(255) DEFAULT NULL,
+  `prefix` varchar(255) DEFAULT NULL,
+  `role` int(11) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `show_password` varchar(255) DEFAULT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
+  `push_token` varchar(2000) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE user_password_resets ---
+CREATE TABLE `user_password_resets` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE vendor ---
+CREATE TABLE `vendor` (
+  `id` int(11) NOT NULL,
+  `branch_id` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `number` varchar(255) DEFAULT NULL,
+  `gst_no` varchar(255) DEFAULT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `company_address` text DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `country_id` int(11) DEFAULT NULL,
+  `state_id` int(11) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--- CREATE TABLE warehouses ---
+CREATE TABLE `warehouses` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--- CREATE TABLE warehouse_inventories ---
+CREATE TABLE `warehouse_inventories` (
+  `id` int(11) NOT NULL,
+  `branch_id` int(11) DEFAULT NULL,
+  `warehouse_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `stock` varchar(255) NOT NULL DEFAULT '0',
+  `used` varchar(255) NOT NULL DEFAULT '0',
+  `actual_stock` varchar(255) NOT NULL DEFAULT '0',
+  `si_blocking_qty` varchar(255) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+ALTER TABLE `appointment_letter`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `arid`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `attendance`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `attendance_branch_id_foreign` (`branch_id`),
+  ADD KEY `attendance_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `brand_logos`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `city`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `client_branch_id_foreign` (`branch_id`),
+  ADD KEY `client_employee_id_foreign` (`employee_id`),
+  ADD KEY `client_referred_type_foreign` (`referred_type`);
+
+ALTER TABLE `client_document`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `client_document_branch_id_foreign` (`branch_id`),
+  ADD KEY `client_document_client_id_foreign` (`client_id`),
+  ADD KEY `client_document_product_id_foreign` (`product_id`),
+  ADD KEY `client_document_lead_id_foreign` (`lead_id`);
+
+ALTER TABLE `companies`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `companies_pro_category_id_foreign` (`pro_category_id`);
+
+ALTER TABLE `company_policy`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `complain`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `complain_branch_id_foreign` (`branch_id`),
+  ADD KEY `complain_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `consent_person`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `country`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `credit`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `credit_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `debit`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `debit_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `delivery`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `delivery_branch_id_foreign` (`branch_id`),
+  ADD KEY `delivery_quotation_id_foreign` (`quotation_id`),
+  ADD KEY `delivery_client_id_foreign` (`client_id`);
+
+ALTER TABLE `delivery_log`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `delivery_log_quotation_id_foreign` (`quotation_id`),
+  ADD KEY `delivery_log_product_id_foreign` (`product_id`);
+
+ALTER TABLE `download`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `employees`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `employees_branch_id_foreign` (`branch_id`);
+
+ALTER TABLE `employee_child`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `employee_child_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `employee_password_resets`
+  ADD KEY `employee_password_resets_email_index` (`email`),
+  ADD KEY `employee_password_resets_token_index` (`token`);
+
+ALTER TABLE `expense`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `expense_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `followup_log`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `group`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `gst`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `gst_branch_id_foreign` (`branch_id`),
+  ADD KEY `gst_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `holiday`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `interior_visit`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `interior_visit_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `item_ledger`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `iv_followup`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `iv_followup_iv_id_foreign` (`iv_id`);
+
+ALTER TABLE `iv_followup_log`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `landmark`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `lead`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lead_branch_id_foreign` (`branch_id`),
+  ADD KEY `lead_employee_id_foreign` (`employee_id`),
+  ADD KEY `lead_client_id_foreign` (`client_id`),
+  ADD KEY `lead_source_id_foreign` (`source_id`),
+  ADD KEY `lead_productcategory_id_foreign` (`productcategory_id`),
+  ADD KEY `lead_product_id_foreign` (`product_id`);
+
+ALTER TABLE `lead_assign`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lead_assign_branch_id_foreign` (`branch_id`),
+  ADD KEY `lead_assign_lead_id_foreign` (`lead_id`),
+  ADD KEY `lead_assign_stage_id_foreign` (`stage_id`),
+  ADD KEY `lead_assign_section_id_foreign` (`section_id`),
+  ADD KEY `lead_assign_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `lead_basic_child`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lead_basic_child_lead_id_foreign` (`lead_id`),
+  ADD KEY `lead_basic_child_productcategory_id_foreign` (`productcategory_id`),
+  ADD KEY `lead_basic_child_company_id_foreign` (`company_id`),
+  ADD KEY `lead_basic_child_product_id_foreign` (`product_id`);
+
+ALTER TABLE `lead_basic_design_child`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lead_basic_design_child_lead_id_foreign` (`lead_id`);
+
+ALTER TABLE `lead_basic_main_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `lead_basic_quotation_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `lead_communication`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lead_communication_branch_id_foreign` (`branch_id`),
+  ADD KEY `lead_communication_lead_id_foreign` (`lead_id`);
+
+ALTER TABLE `lead_followup`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lead_followup_branch_id_foreign` (`branch_id`),
+  ADD KEY `lead_followup_lead_id_foreign` (`lead_id`);
+
+ALTER TABLE `lead_source`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lead_source_branch_id_foreign` (`branch_id`),
+  ADD KEY `lead_source_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `lead_stage`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lead_stage_branch_id_foreign` (`branch_id`),
+  ADD KEY `lead_stage_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `lead_toshow`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `leaves`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `leaves_branch_id_foreign` (`branch_id`),
+  ADD KEY `leaves_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `meeting_entry_emp`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `opening_stock`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `opening_stock_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
+
+ALTER TABLE `pdfs`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `pmc`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_branch_id_foreign` (`branch_id`),
+  ADD KEY `product_company_id_foreign` (`company_id`),
+  ADD KEY `product_productcategory_id_foreign` (`productcategory_id`),
+  ADD KEY `product_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `product_category`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_category_branch_id_foreign` (`branch_id`),
+  ADD KEY `product_category_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `project_name`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `project_type`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `purchase_invoice`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `purchase_invoice_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `purchase_order`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `purchase_order_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `quotation`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `quotation_branch_id_foreign` (`branch_id`),
+  ADD KEY `quotation_employee_id_foreign` (`employee_id`),
+  ADD KEY `quotation_client_id_foreign` (`client_id`);
+
+ALTER TABLE `quotation_child`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `quotation_child_quotation_id_foreign` (`quotation_id`),
+  ADD KEY `quotation_child_productcategory_id_foreign` (`productcategory_id`),
+  ADD KEY `quotation_child_product_id_foreign` (`product_id`);
+
+ALTER TABLE `quotation_main_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `remainder`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `remainder_branch_id_foreign` (`branch_id`),
+  ADD KEY `remainder_employee_id_foreign` (`employee_id`),
+  ADD KEY `remainder_client_id_foreign` (`client_id`),
+  ADD KEY `remainder_quotation_id_foreign` (`quotation_id`);
+
+ALTER TABLE `revised_child`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `revised_child_revised_id_foreign` (`revised_id`),
+  ADD KEY `revised_child_quotation_id_foreign` (`quotation_id`),
+  ADD KEY `revised_child_productcategory_id_foreign` (`productcategory_id`),
+  ADD KEY `revised_child_product_id_foreign` (`product_id`);
+
+ALTER TABLE `revised_main_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `revised_quotation`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `revised_quotation_branch_id_foreign` (`branch_id`),
+  ADD KEY `revised_quotation_employee_id_foreign` (`employee_id`),
+  ADD KEY `revised_quotation_client_id_foreign` (`client_id`),
+  ADD KEY `revised_quotation_quotation_id_foreign` (`quotation_id`);
+
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `salesorder`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `salesorder_branch_id_foreign` (`branch_id`),
+  ADD KEY `salesorder_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `salesorder_child`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `salesorder_child_salesorder_id_foreign` (`salesorder_id`),
+  ADD KEY `salesorder_child_product_id_foreign` (`product_id`);
+
+ALTER TABLE `salesorder_invoice`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `salesorder_invoice_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `section`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `section_branch_id_foreign` (`branch_id`),
+  ADD KEY `section_employee_id_foreign` (`employee_id`);
+
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `service_child`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `service_image`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `source_names`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `source_names_lead_sourceid_foreign` (`lead_sourceid`);
+
+ALTER TABLE `state`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `stock_transfer_history`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `symbol`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `task`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `task_branch_id_foreign` (`branch_id`),
+  ADD KEY `task_employee_id_foreign` (`employee_id`),
+  ADD KEY `task_assign_to_foreign` (`assign_to`);
+
+ALTER TABLE `technician`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `travel_update`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `types`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`),
+  ADD KEY `users_group_id_foreign` (`group_id`);
+
+ALTER TABLE `user_password_resets`
+  ADD KEY `user_password_resets_email_index` (`email`),
+  ADD KEY `user_password_resets_token_index` (`token`);
+
+ALTER TABLE `vendor`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `warehouses`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `warehouse_inventories`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `appointment_letter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `arid`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=458;
+
+ALTER TABLE `attendance`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5734;
+
+ALTER TABLE `brand_logos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+ALTER TABLE `city`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48357;
+
+ALTER TABLE `client`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3681;
+
+ALTER TABLE `client_document`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=289;
+
+ALTER TABLE `companies`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=294;
+
+ALTER TABLE `company_policy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `complain`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `consent_person`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+
+ALTER TABLE `country`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
+
+ALTER TABLE `credit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+ALTER TABLE `credit_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+ALTER TABLE `debit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+ALTER TABLE `debit_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+ALTER TABLE `delivery`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `delivery_log`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `download`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+ALTER TABLE `employees`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+
+ALTER TABLE `employee_child`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `expense`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `expense_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `followup_log`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7584;
+
+ALTER TABLE `galleries`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `group`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `gst`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+ALTER TABLE `holiday`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+ALTER TABLE `interior_visit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
+
+ALTER TABLE `interior_visit_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+
+ALTER TABLE `item_ledger`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5521;
+
+ALTER TABLE `iv_followup`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `iv_followup_log`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `landmark`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+ALTER TABLE `lead`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2213;
+
+ALTER TABLE `lead_assign`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2213;
+
+ALTER TABLE `lead_basic_child`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `lead_basic_design_child`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2333;
+
+ALTER TABLE `lead_basic_main_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+ALTER TABLE `lead_basic_quotation_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
+
+ALTER TABLE `lead_communication`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `lead_followup`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3477;
+
+ALTER TABLE `lead_source`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+
+ALTER TABLE `lead_stage`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+ALTER TABLE `lead_toshow`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `leaves`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+ALTER TABLE `meeting_entry_emp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `opening_stock`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+ALTER TABLE `opening_stock_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7788;
+
+ALTER TABLE `pdfs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `pmc`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `product`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101086;
+
+ALTER TABLE `product_category`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+
+ALTER TABLE `project_name`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+ALTER TABLE `project_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+ALTER TABLE `purchase_invoice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2192;
+
+ALTER TABLE `purchase_invoice_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6930;
+
+ALTER TABLE `purchase_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+ALTER TABLE `purchase_order_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+ALTER TABLE `quotation`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+ALTER TABLE `quotation_child`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `quotation_main_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `remainder`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `revised_child`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `revised_main_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `revised_quotation`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+ALTER TABLE `role`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+ALTER TABLE `salesorder`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1147;
+
+ALTER TABLE `salesorder_child`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9700;
+
+ALTER TABLE `salesorder_invoice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=722;
+
+ALTER TABLE `salesorder_invoice_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2371;
+
+ALTER TABLE `section`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `service`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=823;
+
+ALTER TABLE `service_child`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1009;
+
+ALTER TABLE `service_image`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `source_names`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=860;
+
+ALTER TABLE `state`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4122;
+
+ALTER TABLE `stock_transfer_history`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=745;
+
+ALTER TABLE `symbol`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `task`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+ALTER TABLE `technician`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+ALTER TABLE `travel_update`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `types`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+ALTER TABLE `vendor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
+
+ALTER TABLE `warehouses`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+ALTER TABLE `warehouse_inventories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1419787;
+
+ALTER TABLE `attendance`
+  ADD CONSTRAINT `attendance_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `attendance_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `client`
+  ADD CONSTRAINT `client_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `client_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `client_referred_type_foreign` FOREIGN KEY (`referred_type`) REFERENCES `lead_source` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `client_document`
+  ADD CONSTRAINT `client_document_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `client_document_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `client_document_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `lead` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `client_document_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `companies`
+  ADD CONSTRAINT `companies_pro_category_id_foreign` FOREIGN KEY (`pro_category_id`) REFERENCES `product_category` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `complain`
+  ADD CONSTRAINT `complain_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `complain_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `delivery`
+  ADD CONSTRAINT `delivery_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `delivery_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `delivery_quotation_id_foreign` FOREIGN KEY (`quotation_id`) REFERENCES `quotation` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `delivery_log`
+  ADD CONSTRAINT `delivery_log_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `delivery_log_quotation_id_foreign` FOREIGN KEY (`quotation_id`) REFERENCES `quotation` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `employees`
+  ADD CONSTRAINT `employees_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `employee_child`
+  ADD CONSTRAINT `employee_child_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `gst`
+  ADD CONSTRAINT `gst_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `gst_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `lead`
+  ADD CONSTRAINT `lead_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_productcategory_id_foreign` FOREIGN KEY (`productcategory_id`) REFERENCES `product_category` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_source_id_foreign` FOREIGN KEY (`source_id`) REFERENCES `lead_source` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `lead_assign`
+  ADD CONSTRAINT `lead_assign_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_assign_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `lead` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_assign_section_id_foreign` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_assign_stage_id_foreign` FOREIGN KEY (`stage_id`) REFERENCES `lead_stage` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `lead_basic_child`
+  ADD CONSTRAINT `lead_basic_child_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_basic_child_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `lead` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_basic_child_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_basic_child_productcategory_id_foreign` FOREIGN KEY (`productcategory_id`) REFERENCES `product_category` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `lead_basic_design_child`
+  ADD CONSTRAINT `lead_basic_design_child_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `lead` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `lead_communication`
+  ADD CONSTRAINT `lead_communication_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_communication_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `lead` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `lead_followup`
+  ADD CONSTRAINT `lead_followup_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_followup_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `lead` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `lead_source`
+  ADD CONSTRAINT `lead_source_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_source_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `lead_stage`
+  ADD CONSTRAINT `lead_stage_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `lead_stage_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `leaves`
+  ADD CONSTRAINT `leaves_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `leaves_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `product`
+  ADD CONSTRAINT `product_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `product_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `product_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `product_productcategory_id_foreign` FOREIGN KEY (`productcategory_id`) REFERENCES `product_category` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `product_category`
+  ADD CONSTRAINT `product_category_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `product_category_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `quotation`
+  ADD CONSTRAINT `quotation_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `quotation_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `quotation_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `quotation_child`
+  ADD CONSTRAINT `quotation_child_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `quotation_child_productcategory_id_foreign` FOREIGN KEY (`productcategory_id`) REFERENCES `product_category` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `quotation_child_quotation_id_foreign` FOREIGN KEY (`quotation_id`) REFERENCES `quotation` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `remainder`
+  ADD CONSTRAINT `remainder_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `remainder_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `remainder_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `remainder_quotation_id_foreign` FOREIGN KEY (`quotation_id`) REFERENCES `quotation` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `revised_child`
+  ADD CONSTRAINT `revised_child_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `revised_child_productcategory_id_foreign` FOREIGN KEY (`productcategory_id`) REFERENCES `product_category` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `revised_child_quotation_id_foreign` FOREIGN KEY (`quotation_id`) REFERENCES `quotation` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `revised_child_revised_id_foreign` FOREIGN KEY (`revised_id`) REFERENCES `revised_quotation` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `revised_quotation`
+  ADD CONSTRAINT `revised_quotation_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `revised_quotation_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `revised_quotation_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `revised_quotation_quotation_id_foreign` FOREIGN KEY (`quotation_id`) REFERENCES `quotation` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `salesorder`
+  ADD CONSTRAINT `salesorder_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `salesorder_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `salesorder_child`
+  ADD CONSTRAINT `salesorder_child_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `salesorder_child_salesorder_id_foreign` FOREIGN KEY (`salesorder_id`) REFERENCES `salesorder` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `section`
+  ADD CONSTRAINT `section_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `section_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `source_names`
+  ADD CONSTRAINT `source_names_lead_sourceid_foreign` FOREIGN KEY (`lead_sourceid`) REFERENCES `lead_source` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `task`
+  ADD CONSTRAINT `task_assign_to_foreign` FOREIGN KEY (`assign_to`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `task_branch_id_foreign` FOREIGN KEY (`branch_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `task_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `group` (`id`) ON DELETE CASCADE;
+
